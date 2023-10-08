@@ -6,6 +6,7 @@ import Errorpage from '../Pages/Errorpage/Errorpage';
 import Servicespage from '../Pages/Servicespage/Servicespage';
 import Featurepage from '../Pages/Featurepage/Featurepage';
 import Favouritepage from '../Pages/Favouritepage/Favouritepage';
+import Ourservices from '../components/Ourservices/Ourservices';
 
 const Router = createBrowserRouter([
     {
@@ -15,11 +16,13 @@ const Router = createBrowserRouter([
         children:[
             {
                 path:"/",
-                element: <Homepage></Homepage>
+                element: <Homepage></Homepage>,
+                loader: ()=> fetch('/services.json')
             },
             {
                 path:"/services",
-                element: <Servicespage></Servicespage>
+                element: <Ourservices></Ourservices>,
+                loader: ()=> fetch('/services.json')
             },
             {
                 path:"/feature",
