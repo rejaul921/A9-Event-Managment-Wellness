@@ -1,7 +1,9 @@
-import React from 'react';
+
 import Banner from '../../components/Banner/Banner';
 import Ourservices from '../../components/Ourservices/Ourservices';
 import { useLoaderData } from 'react-router-dom';
+import Testominals from '../../components/Testominals/Testominals';
+import Whyus from '../../components/Whyus/Whyus';
 
 const Homepage = () => {
     const services = useLoaderData();
@@ -10,6 +12,8 @@ const Homepage = () => {
         <div className=''>
             <Banner></Banner>
             <Ourservices></Ourservices>
+            <Testominals></Testominals>
+            <Whyus></Whyus>
         </div>
     );
 };
