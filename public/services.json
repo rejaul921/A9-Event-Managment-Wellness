@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "title": "Mindful Movement Event",
+      "img": "mindful_movement_image.jpg",
+      "description": "Immerse yourself in the tranquility of our Mindful Movement Event, a blissful journey blending meditation and gentle exercises. Rediscover the mind-body connection as expert instructors guide you through practices that promote relaxation and rejuvenation. This event is a haven for those seeking a holistic approach to well-being, where each movement is a step towards mindfulness.",
+      "price": 29.99
+    },
+    {
+      "id": 2,
+      "title": "Fitness Fusion Event",
+      "img": "fitness_fusion_image.jpg",
+      "description": "Unleash your passion for a healthy lifestyle at our Fitness Fusion Event. Join us for an energetic convergence of various fitness disciplines designed to elevate your workout routine. Experience the thrill of dynamic fusion workouts that seamlessly combine strength, flexibility, and cardio exercises. It's a fitness extravaganza that promises to ignite your enthusiasm for a balanced and invigorating lifestyle.",
+      "price": 39.99
+    },
+    {
+      "id": 3,
+      "title": "Mental Wellness Event",
+      "img": "mental_wellness_image.jpg",
+      "description": "Prioritize your mental well-being at our Mental Wellness Event, a nurturing space where mindfulness takes center stage. Engage in expert-led sessions that explore stress-relief techniques, meditation practices, and insights to foster a resilient mind. Discover the power of mindfulness in cultivating a positive mental outlook and enhancing your overall emotional health.",
+      "price": 34.99
+    },
+    {
+      "id": 4,
+      "title": "Healthy Habits Event",
+      "img": "healthy_habits_image.jpg",
+      "description": "Embark on a transformative journey towards a healthier you with our Healthy Habits Event. This comprehensive program is designed to empower you with the knowledge and tools needed to cultivate and sustain positive lifestyle habits. From nutrition guidance to fitness routines, our experts will provide practical insights to help you make lasting changes and achieve your wellness goals.",
+      "price": 44.99
+    },
+    {
+      "id": 5,
+      "title": "Yoga Bliss Event",
+      "img": "yoga_bliss_image.jpg",
+      "description": "Immerse yourself in the serenity of our Yoga Bliss Event, where tranquility meets transformation. Join skilled yoga instructors in harmonious sessions designed to nourish your body, calm your mind, and uplift your spirit. Whether you're a seasoned yogi or a beginner, this event offers a sanctuary for self-discovery and rejuvenation through the ancient art of yoga.",
+      "price": 24.99
+    },
+    {
+      "id": 6,
+      "title": "Wellness Wisdom Event",
+      "img": "wellness_wisdom_image.jpg",
+      "description": "Unlock the secrets to holistic well-being at our Wellness Wisdom Event. Dive into thought-provoking discussions led by experts in the field, offering practical insights into living a healthier and more balanced life. This event is a gathering of minds, where wisdom meets wellness, providing attendees with valuable takeaways and actionable steps towards a mindful and purposeful journey.",
+      "price": 49.99
+    }
+  ]
+  
