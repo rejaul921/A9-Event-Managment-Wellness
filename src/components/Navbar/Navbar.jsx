@@ -9,10 +9,32 @@ const Navbar = () => {
                 <div> <p>Wellness EventHarbor</p></div>
             </div>
             <div className='w-1/2 flex justify-around gap-3 text-center'>
-                <div><NavLink to={"/"}>Home</NavLink></div>
-                <div><NavLink to={"/blog"}>Blog</NavLink></div>
-                <div><NavLink to={"/regster"}>Register</NavLink></div>
-                <div><NavLink to={"/services"}>Services</NavLink></div>
+                <div><NavLink to="/" className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "bg-green-700 text-white p-2 rounded-lg" : ""} >
+                            Home
+                    </NavLink>
+                </div>
+                <div><NavLink to="/favourite"  className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "bg-green-700 text-white p-2 rounded-lg" : ""}>
+                        Favourite Events
+                    </NavLink>
+                </div>
+                <div><NavLink to="/feature" className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "bg-green-700 text-white p-2 rounded-lg" : ""}>
+                        Features
+                    </NavLink>
+                </div>
+                <div><NavLink to="/services" className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "bg-green-700 text-white p-2 rounded-lg" : ""}>
+                        Services
+                    </NavLink>
+                </div>
+                <div><NavLink to="/regster"  className={({ isActive, isPending }) =>
+                        isPending ? "pending" : isActive ? "bg-green-700 text-white p-2 rounded-lg" : ""}>
+                        Register
+                    </NavLink>
+                </div>
+                
             </div>
         </div>
     );
