@@ -1,12 +1,14 @@
-import React from 'react';
+
 import { createBrowserRouter } from 'react-router-dom';
 import Root from '../Root/Root';
 import Homepage from '../Pages/Homepage/Homepage';
 import Errorpage from '../Pages/Errorpage/Errorpage';
-import Servicespage from '../Pages/Servicespage/Servicespage';
-import Featurepage from '../Pages/Featurepage/Featurepage';
-import Favouritepage from '../Pages/Favouritepage/Favouritepage';
 import Ourservices from '../components/Ourservices/Ourservices';
+import Servicedes from '../components/Servicec/Servicedes';
+import Forlogin from '../Pages/Forlogin/Forlogin';
+import Register from '../Pages/Forlogin/Register';
+import ConactUs from '../Pages/Featurepage/ConactUs';
+import RunningEvents from '../Pages/Favouritepage/RunningEvents';
 
 const Router = createBrowserRouter([
     {
@@ -25,12 +27,25 @@ const Router = createBrowserRouter([
                 loader: ()=> fetch('/services.json')
             },
             {
-                path:"/feature",
-                element: <Featurepage></Featurepage>
+                path:"/services/:id",
+                element: <Servicedes></Servicedes>,
+                loader: ()=> fetch('/services.json')
             },
             {
-                path:"/favourite",
-                element: <Favouritepage></Favouritepage>
+                path:"/contactus",
+                element: <ConactUs></ConactUs>
+            },
+            {
+                path:"/running",
+                element: <RunningEvents></RunningEvents>
+            },
+            {
+                path:"/login",
+                element: <Forlogin></Forlogin>
+            },
+            {
+                path:"/register",
+                element: <Register></Register>
             }
         ]
     }
