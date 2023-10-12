@@ -38,9 +38,12 @@ const Navbar = () => {
                 </div>
                 <div>
                     {
-                        user ? <div className='flex'>
-                            <img className='rounded-full w-14 h-14' src={user.photoURL} alt="" />
-                            <button onClick={SignOut} className='btn bg-green-700 text-white rounded-lg '>Logout</button>
+                        user ? <div className=''>
+                            <div className='flex items-center text-center gap-1'>
+                                <button onClick={SignOut} className=' bg-green-700 p-1 text-white rounded-lg '>Logout</button>
+                                <img className='rounded-full w-8 h-8' src={user.photoURL} alt="" />
+                                <p>{user.displayName}</p>
+                            </div>             
                         </div>
 
                             :

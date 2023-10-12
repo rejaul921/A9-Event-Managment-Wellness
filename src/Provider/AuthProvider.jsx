@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../Firbase/Firebase.config';
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, updateProfile } from "firebase/auth";
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 export const AuthContext=createContext(null)
 const auth= getAuth(app)
@@ -8,9 +8,22 @@ const AuthProvider = ({children}) => {
     const [user,setUser]=useState(null)
     const[loading, setLoading]=useState(true)
 
-    const createUser= (email, password, name, photo)=>{
+    const createUser= async (email, password, name, photo)=>{
         setLoading(true);
-        return createUserWithEmailAndPassword(auth, email, password, name, photo);
+        const createdUser = await createUserWithEmailAndPassword(auth, email, password);
+        await updateProfile (createdUser.user, { displayName: name, photoURL: photo })
+            .then(() => {
+                setUser(createdUser.user);
+                setLoading(false);
+                console.log(user);
+            })
+            .catch(() => {
+                setLoading(false);
+                console.error("Error updating profile:");
+                
+            });
+
+        return createdUser;
     }
 
     const provider = new GoogleAuthProvider();

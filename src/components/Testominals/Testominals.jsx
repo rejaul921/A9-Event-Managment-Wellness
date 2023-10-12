@@ -1,5 +1,11 @@
-
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Testominals = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
         <div>
             <div className="text-center">
@@ -8,7 +14,7 @@ const Testominals = () => {
             </div>
             <div className='grid my-8 gap-3 md:grid-cols-2 lg:grid-cols-3'>
             {/* person1 */}
-                <div className="card bg-neutral text-neutral-content">
+                <div data-aos="fade-right" className="card bg-neutral text-neutral-content">
                 <div><img className='w-16 h-16 mx-auto mt-5 rounded-full' src="https://i.ibb.co/0VDgjw0/emily.jpg" alt="" /></div>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">Emily</h2>
@@ -16,7 +22,7 @@ const Testominals = () => {
                 </div>
                 </div>
             {/* person 2 */}
-                <div className="card bg-neutral text-neutral-content">
+                <div data-aos="fade-down" className="card bg-neutral text-neutral-content">
                 <div><img className='w-16 h-16 mx-auto mt-5  rounded-full' src="https://i.ibb.co/vV1NvgS/alex.jpg" alt="" /></div>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">Alex</h2>
@@ -24,7 +30,7 @@ const Testominals = () => {
                 </div>
                 </div>
             {/* person 3 */}
-                <div className="card bg-neutral text-neutral-content">
+                <div data-aos="fade-left" className="card bg-neutral text-neutral-content">
                 <div><img className='w-16 h-16 mx-auto mt-5  rounded-full' src="https://i.ibb.co/p1rsYW8/sarah.jpg" alt="" /></div>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">Sara</h2>
