@@ -1,10 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Forlogin = () => {
     const { Login, GoogleSignin } = useContext(AuthContext);
+    const location=useLocation()
+    const navigate = useNavigate()
+
 
     const handleLogin = e => {
         e.preventDefault();
@@ -15,6 +18,7 @@ const Forlogin = () => {
         Login(email, password)
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state? location.state : "/" )
                 return alert("Successfully logged in")
             })
             .catch(error => {
@@ -30,6 +34,7 @@ const Forlogin = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                navigate(location?.state? location.state : "/" )
             })
             .catch(error => {
                 console.error(error)

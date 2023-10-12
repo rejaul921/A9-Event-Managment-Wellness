@@ -9,6 +9,7 @@ import Forlogin from '../Pages/Forlogin/Forlogin';
 import Register from '../Pages/Forlogin/Register';
 import ConactUs from '../Pages/Featurepage/ConactUs';
 import RunningEvents from '../Pages/Favouritepage/RunningEvents';
+import Protected from '../components/Protected Route/Protected';
 
 const Router = createBrowserRouter([
     {
@@ -28,16 +29,16 @@ const Router = createBrowserRouter([
             },
             {
                 path:"/services/:id",
-                element: <Servicedes></Servicedes>,
+                element: <Protected><Servicedes></Servicedes></Protected>,
                 loader: ()=> fetch('/services.json')
             },
             {
                 path:"/contactus",
-                element: <ConactUs></ConactUs>
+                element: <Protected><ConactUs></ConactUs></Protected>
             },
             {
                 path:"/running",
-                element: <RunningEvents></RunningEvents>
+                element: <Protected><RunningEvents></RunningEvents></Protected>
             },
             {
                 path:"/login",
