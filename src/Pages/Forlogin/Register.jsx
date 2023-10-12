@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import swal from 'sweetalert';
 
 const Register = () => {
 
@@ -17,18 +18,18 @@ const Register = () => {
         const passwordExpression = /^(?=.*[!@#$%^&*])(?=.*[A-Z]).{6,}$/;
 
         if (!passwordExpression.test(password)) {
-            alert("Password must have a special character, a capital letter, and be at least 6 characters long.");
+            swal("Password must have a special character, a capital letter, and be at least 6 characters long.");
             return;
         }
 
         createUser(email, password, name, photo)
             .then(createdUser => {
                 console.log(createdUser.user)
-                return alert("Successfully created auser")
+                return swal("Successfully created auser, Now go to Login")
             })
             .catch(error => {
                 console.error(error)
-                return alert("already user exsits")
+                return swal("already user exsits")
             })
 
     }

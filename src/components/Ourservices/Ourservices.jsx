@@ -1,10 +1,10 @@
-import React from 'react';
+
 import { useLoaderData } from 'react-router-dom';
 import Service from '../Servicec/Service';
 
 const Ourservices = () => {
     const services = useLoaderData()
-    console.log(services)
+    
     return (
         <div className='my-11'>
             <div className='text-center'>

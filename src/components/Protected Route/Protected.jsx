@@ -5,7 +5,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 const Protected = ({children}) => {
     const{user,loading}=useContext(AuthContext);
     const location =useLocation()
-    console.log(location.pathname)
+    
 
     if(loading){
         return <div className='flex justify-center items-center my-auto mx-auto'><div><span className="loading loading-bars loading-xs"></span>

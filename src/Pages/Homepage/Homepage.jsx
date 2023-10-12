@@ -7,11 +7,10 @@ import Whyus from '../../components/Whyus/Whyus';
 
 const Homepage = () => {
     const services = useLoaderData();
-    console.log(services);
     return (
         <div className=''>
             <Banner></Banner>
-            <Ourservices></Ourservices>
+            <Ourservices services={services}></Ourservices>
             <Testominals></Testominals>
             <Whyus></Whyus>
         </div>

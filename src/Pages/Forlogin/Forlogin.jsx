@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import swal from 'sweetalert';
 
 
 const Forlogin = () => {
@@ -17,13 +18,13 @@ const Forlogin = () => {
 
         Login(email, password)
             .then(result => {
-                console.log(result.user)
+                // console.log(result.user)
                 navigate(location?.state? location.state : "/" )
-                return alert("Successfully logged in")
+                return swal("Successfully logged in");
             })
             .catch(error => {
-                console.error(error.message)
-                return alert("Please provide valid Email and Password")
+                // console.error(error.message)
+                return swal("Please provide valid email and Password");
             })
 
     }
@@ -33,7 +34,7 @@ const Forlogin = () => {
         GoogleSignin()
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                // console.log(user)
                 navigate(location?.state? location.state : "/" )
             })
             .catch(error => {
